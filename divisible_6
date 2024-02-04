@@ -1,0 +1,22 @@
+package dsa;
+
+
+import java.util.*;
+//checking if a number is divisible by 6 or not
+public class divisible {
+ public static void main(String args[]) {
+	 //now we would create a scanner that would scan the number to be input
+	 
+	 Scanner sc = new Scanner(System.in);
+	 System.out.println("Enter the number ");
+	 int number = sc.nextInt();
+	 
+	 if(number%6==0) {
+		 System.out.println(number+" is divisible by 6");
+	 }else {
+		 System.out.println(number+"is not divisible by 6");
+	 }
+	 sc.close();
+	 
+ }
+}
