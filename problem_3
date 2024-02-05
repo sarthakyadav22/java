@@ -1,0 +1,23 @@
+package dsa;
+
+import java.util.*;
+//create a proegram to find the sum of three values from the user 
+public class problem_3 {
+  public static void main (String args[]) {
+	  
+	  Scanner sc = new Scanner (System.in) ;
+	  Scanner sc1 = new Scanner (System.in);
+	  Scanner sc2 = new Scanner (System.in);
+	  
+	  System.out.println("enter the first number");
+	  int number = sc.nextInt();
+	  System.out.println("enter the second number");
+	  int number2 = sc.nextInt();
+	  System.out.println("enter the third number");
+	  int number3 = sc.nextInt();
+	  
+	  int number4= number+number2+number3;
+	  
+	  System.out.println("the sum of triplets is"+number4);
+  }
+}
