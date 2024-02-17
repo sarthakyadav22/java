@@ -1,0 +1,41 @@
+package prjects;
+ import java.util.*;
+ //creating a word checker program to find if a word is present in the sentence or not.
+public class wordchecker {
+
+	
+	// to check if the word is present or not.
+	static boolean isWordPresent(String sentence, String word) {
+		// now we break the sentence into singular words
+		// we use the sentence.split() function to split the sentence into words
+		
+		
+		String [] s = sentence.split(" ");
+		
+		// to temporarily store the words 
+		for(String temp:s) {
+			//comparing the current word with other word
+			if(temp.compareTo(word)==0) {
+				return true;
+			}
+		} 
+			return false;
+		
+	}
+	public static void main (String args[]) {
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("enter a sentence");
+		String s = sc.nextLine();
+		
+		System.out.println("enter a word");
+		String word = sc.next();
+		
+		if (isWordPresent(s,word)) {
+	 System.out.println("yes");
+			
+		}else {
+			System.out.println("no");
+		}
+	}
+}
