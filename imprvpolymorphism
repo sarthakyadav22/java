@@ -1,0 +1,50 @@
+package dde;
+
+import java.util.*;
+
+class animal{
+	void makesound() {
+		System.out.println("Animal sound");
+	}
+}
+
+class dog extends animal{
+	@Override
+	void makesound() {
+		System.out.println("bark bark");
+	}
+}
+
+class cat extends animal{
+	@Override
+	void makesound() {
+		System.out.println("meow meow");
+	}
+}
+
+public class imprvpolymorphism{
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter the name of the animal(cat/dog)");
+		String name = sc.nextLine().toLowerCase();
+		
+		animal myanimal;
+		
+		if(name.equals("dog")) {
+			myanimal = new dog();
+			
+		}
+		else if(name.equals("cat")) {
+			myanimal = new cat();
+			
+		}
+		else {
+			System.out.println("unknown animal");
+			myanimal = new animal();
+			
+		}
+		
+		myanimal.makesound();
+	}
+}
