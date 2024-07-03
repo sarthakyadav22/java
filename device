@@ -1,0 +1,31 @@
+package dde;
+
+import java.util.*;
+
+public class device{
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter your name");
+		String name = sc.nextLine();
+		
+		String number;
+		
+		while (true) {
+		System.out.println("enter a number");
+		number = sc.nextLine();
+		
+		if(number.length()==10 && number.matches(("\\d+"))) {
+			System.out.println("the number is valid");
+		break;
+		}else {
+			System.out.println("invalid input");
+		}
+		
+		
+		}
+		System.out.println("your name is "+name);	
+		System.out.println("your number is "+number);
+	}
+}
