@@ -1,0 +1,48 @@
+package dde;
+
+
+
+import java.util.Scanner;
+
+class Animal {
+    void makesound() {
+        System.out.println("animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makesound() {
+        System.out.println("bark bark");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makesound() {
+        System.out.println("meow meow");
+    }
+}
+
+public class PolymorphismDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Animal myanimal;
+
+        System.out.println("Enter your search sentence:");
+        String name = sc.nextLine();
+
+        if (name.equalsIgnoreCase("what sound does dog make?")) {
+            myanimal = new Dog();
+        } else if (name.equalsIgnoreCase("what sound does cat make?")) {
+            myanimal = new Cat();
+        } else {
+            System.out.println("Unknown animal");
+            myanimal = new Animal();
+        }
+        myanimal.makesound();
+
+    }
+}
+
